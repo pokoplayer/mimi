@@ -45,12 +45,36 @@ Mimi は、ゲームのボイスチャットで話された言葉を聞き取っ
 
 - ボイスチャットだけを別の再生デバイス（仮想オーディオデバイスなど）に出すと、ゲーム音を拾わずに済み、聞き取りの精度が上がります。やり方は、設定の「相手の声」→「やり方を見る」にあります（VB-CABLE・SteelSeries Sonar。どちらも無料）。
 - オーバーレイをゲームの上に表示するには、ゲームの画面モードを「フルスクリーン」以外（ボーダーレス・ウィンドウ）にしてください。
-- VALORANT 用の用語集（韓国語→日本語）が入っています。設定の「ゲームの用語集」で選べます。
+- VALORANT 用の用語集（韓国語→日本語）が入っています。設定の「ゲームの用語集」で選べます。自分の遊ぶゲーム用の用語集を作ったり、ファイルにして友達と共有したりもできます。
 
 ### 困ったときは・お問い合わせ
 
 - 設定の「トラブルシューティング」→「動作の診断」を押すと、GPU・音声認識・録音・翻訳が正しく動いているかを約5秒で確かめられます。録音のつなぎ直しや、設定を初期値に戻すこともできます。
 - 不具合の報告や要望は、Discord（ユーザー名: **lonelylimits**）で受け付けています。診断の「結果をコピー」を押すと結果をそのまま貼り付けて送れるので、一緒に送ってもらえると助かります（APIキーは含まれません）。
+
+### 料金について（完全無料で使うには）
+
+Mimi は無料で使えます。お金がかかる可能性があるのは翻訳だけです。
+
+| | 料金 | 特徴 |
+|---|---|---|
+| 音声認識 | 無料 | PC の中（GPU）で動きます |
+| Google翻訳（最初の設定） | 無料 | キーは不要。ただし公式の API ではないため、使いすぎると一時的に止まることがあります |
+| Groq の AI翻訳（無料プラン） | 無料 | より自然な訳。1日に使える量に上限があります（下記） |
+| Groq の AI翻訳（有料プラン） | 1時間 約7円 | 無料プランより大きな上限で使えます（使った分だけ） |
+
+**完全無料で使うには**、Groq の APIキーを無料プランのまま使ってください。有料プランに切り替えない限り、料金はかかりません。キーを入れなければ、Google翻訳だけで動きます。
+
+**Groq の無料プランの上限**（翻訳に使う gpt-oss-120b の場合。2026年10月時点）
+- 1日に 20万トークン・1,000回まで、1分に 8,000トークン・30回まで
+- Mimi の翻訳は1回あたり約650トークンなので、1日に約300回（にぎやかに話し続けて約50分ぶん）まで AI翻訳 を使えます
+- 上限に達したり、会話が立て込んだりしたときは、自動で Google翻訳 に切り替わって翻訳は続きます。しばらくすると AI翻訳 に戻ります
+- 上限は変わることがあります。最新の値は [Groq の公式ページ](https://console.groq.com/docs/rate-limits) を見てください
+
+**有料プランにした場合の目安**（gpt-oss-120b の料金: 100万トークンあたり 入力 $0.15・出力 $0.60）
+- 翻訳1回あたり 約 $0.00012（約0.02円）
+- にぎやかに話し続けた場合（1時間に約360回）で、1時間 約 $0.04（約7円）、3時間で約20円
+- 1ドル＝150円で計算しています。実際の料金の目安は、アプリの左下「このセッションの料金（目安）」と「履歴」で確かめられます
 
 ### アンインストール
 
@@ -86,6 +110,30 @@ Get `Mimi-<version>-win64.zip` from [Releases](../../releases/latest).
 3. Mimi starts with Google Translate. For more natural translations, create a free Groq API key at
    [console.groq.com/keys](https://console.groq.com/keys), paste it under "Translation" in Settings, and click "Apply".
 4. Click "Start" on the Live page to begin listening and translating. Click "Finish" to end the session; you can review it in "History".
+
+### Cost (and how to use it for free)
+
+Mimi is free. The only thing that can cost money is translation.
+
+| | Cost | Notes |
+|---|---|---|
+| Speech recognition | Free | Runs on your PC (GPU) |
+| Google Translate (default) | Free | No key needed. It isn't an official API, so it may stop for a while if used heavily |
+| Groq AI translation (free plan) | Free | More natural translations, with a daily limit (see below) |
+| Groq AI translation (paid plan) | About $0.04 / hour | Higher limits than the free plan; pay only for what you use |
+
+**To use Mimi completely free**, keep your Groq API key on the free plan — you won't be charged unless you upgrade. Without a key, Mimi uses Google Translate only.
+
+**Groq free plan limits** (for gpt-oss-120b, used for translation; as of October 2026)
+- 200K tokens and 1,000 requests per day; 8,000 tokens and 30 requests per minute
+- Each translation uses about 650 tokens, so you get about 300 AI translations a day (roughly 50 minutes of non-stop chatting)
+- When you hit a limit or the conversation gets busy, Mimi automatically switches to Google Translate and keeps going, then returns to AI translation later
+- Limits may change — see [Groq's rate limits page](https://console.groq.com/docs/rate-limits) for the latest
+
+**Paid plan estimate** (gpt-oss-120b: $0.15 input / $0.60 output per million tokens)
+- About $0.00012 per translation
+- About $0.04 per hour of non-stop chatting (about 360 translations an hour)
+- The app shows an estimate under "Cost this session" (bottom left) and in History
 
 ### Troubleshooting and contact
 
@@ -124,6 +172,30 @@ Mimi는 게임 보이스 채팅에서 들리는 말을 알아듣고 번역해서
 3. 처음에는 Google 번역으로 작동합니다. 더 자연스럽게 번역하려면 무료 Groq API 키를
    [console.groq.com/keys](https://console.groq.com/keys)에서 만들어 설정의 "번역"에 붙여 넣은 뒤 "적용"을 누르세요.
 4. 라이브 화면에서 "시작"을 누르면 듣기와 번역이 시작됩니다. "완료"를 누르면 세션이 끝나고, 대화는 "기록"에서 다시 볼 수 있습니다.
+
+### 요금 (완전 무료로 쓰려면)
+
+Mimi는 무료입니다. 돈이 들 수 있는 것은 번역뿐입니다.
+
+| | 요금 | 특징 |
+|---|---|---|
+| 음성 인식 | 무료 | PC(GPU)에서 작동합니다 |
+| Google 번역 (처음 설정) | 무료 | 키가 필요 없습니다. 다만 공식 API가 아니어서 많이 쓰면 잠시 멈출 수 있습니다 |
+| Groq AI 번역 (무료 플랜) | 무료 | 더 자연스러운 번역. 하루에 쓸 수 있는 양에 한도가 있습니다 (아래 참고) |
+| Groq AI 번역 (유료 플랜) | 1시간 약 $0.04 | 무료 플랜보다 큰 한도로 쓸 수 있습니다 (쓴 만큼만) |
+
+**완전 무료로 쓰려면** Groq API 키를 무료 플랜 그대로 쓰세요. 유료 플랜으로 바꾸지 않는 한 요금은 나오지 않습니다. 키를 넣지 않으면 Google 번역만으로 작동합니다.
+
+**Groq 무료 플랜 한도** (번역에 쓰는 gpt-oss-120b 기준, 2026년 10월 현재)
+- 하루 20만 토큰·1,000회, 1분에 8,000토큰·30회까지
+- Mimi의 번역은 1회 약 650토큰이라, 하루 약 300회(쉬지 않고 이야기해서 약 50분 분량)까지 AI 번역을 쓸 수 있습니다
+- 한도에 도달하거나 대화가 몰리면 자동으로 Google 번역으로 바뀌어 번역은 계속되고, 잠시 뒤 AI 번역으로 돌아옵니다
+- 한도는 바뀔 수 있습니다. 최신 값은 [Groq 공식 페이지](https://console.groq.com/docs/rate-limits)를 확인하세요
+
+**유료 플랜 기준 예상** (gpt-oss-120b: 100만 토큰당 입력 $0.15·출력 $0.60)
+- 번역 1회 약 $0.00012
+- 쉬지 않고 이야기한 경우(1시간 약 360회) 1시간 약 $0.04
+- 실제 예상 요금은 앱 왼쪽 아래 '이번 세션 요금(예상)'과 '기록'에서 확인할 수 있습니다
 
 ### 문제가 있을 때·문의
 
