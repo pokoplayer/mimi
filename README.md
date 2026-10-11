@@ -24,7 +24,9 @@ Mimi は、ゲームのボイスチャットで話された言葉を聞き取っ
 
 ### ダウンロード
 
-[Releases](../../releases/latest) から `Mimi-<版>-win64.zip` をダウンロードしてください。
+[Releases](../../releases/latest) から `Mimi-Setup-<版>.exe` をダウンロードしてください。
+
+一度インストールすれば、新しい版が出たときはアプリの中からアップデートできます（ふだんは約20MBのダウンロードで済みます）。
 
 ### 必要なもの
 
@@ -34,7 +36,7 @@ Mimi は、ゲームのボイスチャットで話された言葉を聞き取っ
 
 ### はじめかた
 
-1. zip を展開して `Mimi.exe` を起動します。「Windows によって PC が保護されました」と出たら「詳細情報」→「実行」を押してください。
+1. `Mimi-Setup-<版>.exe` を実行してインストールします（管理者の許可は要りません）。「Windows によって PC が保護されました」と出たら「詳細情報」→「実行」を押してください。zip 版を使っていた人は、インストールしたあとに古いフォルダを消して大丈夫です（設定と履歴は引き継がれます）。
 2. 初回は設定画面が開きます。言語、相手の声が聞こえるデバイス、マイクを選んで「はじめる」を押します。
 3. 最初は Google翻訳で動きます。もっと自然に訳すには、無料の Groq の APIキーを [console.groq.com/keys](https://console.groq.com/keys) で作って、設定の「翻訳」に貼り付けて「適用」を押してください。
 4. ライブ画面の「開始」を押すと、聞き取りと翻訳が始まります。「完了」を押すとセッションが終わり、会話は「履歴」から見返せます。
@@ -78,9 +80,13 @@ Mimi は無料で使えます。お金がかかる可能性があるのは翻訳
 - 設定の「翻訳」→「AI翻訳のモデル」で Qwen 3.8 27B を選ぶと、くだけた言い方に強く速くなるかわりに、料金は約3倍（1時間 約19円）になります（料金: 100万トークンあたり 入力 $0.80・出力 $4.00）
 - 1ドル＝150円で計算しています。実際の料金の目安は、アプリの左下「このセッションの料金（目安）」と「履歴」で確かめられます
 
+### アップデート
+
+起動したときに新しい版があるかを確かめ、あればサイドバーに「新しい版があります」と出ます。「アップデート」→「再起動して更新」を押すと、入れ替えてから起動し直します。ふだんはアプリ本体（約20MB）だけを入れ替え、GPU 用のライブラリが変わった版だけ全部（約530MB）をダウンロードします。勝手に入れ替わることはありません（確認は設定の「このアプリについて」でオフにもできます）。
+
 ### アンインストール
 
-展開したフォルダと、`%APPDATA%\Mimi`（設定・ログ）、`%LOCALAPPDATA%\Mimi`（音声認識モデル）を削除してください。
+Windows の「設定」→「アプリ」→「インストールされているアプリ」から Mimi をアンインストールしてください。設定・履歴（`%APPDATA%\Mimi`）と音声認識モデル（`%LOCALAPPDATA%\Mimi`）は残るので、要らなければこの2つのフォルダも削除してください。
 
 ---
 
@@ -97,7 +103,9 @@ It can also translate what *you* say into their language with a pronunciation gu
 
 ### Download
 
-Get `Mimi-<version>-win64.zip` from [Releases](../../releases/latest).
+Get `Mimi-Setup-<version>.exe` from [Releases](../../releases/latest).
+
+Once installed, Mimi updates itself from inside the app (usually a download of about 20 MB).
 
 ### Requirements
 
@@ -107,7 +115,7 @@ Get `Mimi-<version>-win64.zip` from [Releases](../../releases/latest).
 
 ### Getting started
 
-1. Extract the zip and run `Mimi.exe`. If you see "Windows protected your PC", click "More info" → "Run anyway".
+1. Run `Mimi-Setup-<version>.exe` to install (no admin rights needed). If you see "Windows protected your PC", click "More info" → "Run anyway". If you used the zip version, you can delete the old folder after installing (your settings and history are kept).
 2. On first launch, Settings opens. Choose your languages, the device where you hear voice chat, and your microphone, then click "Get started".
 3. Mimi starts with Google Translate. For more natural translations, create a free Groq API key at
    [console.groq.com/keys](https://console.groq.com/keys), paste it under "Translation" in Settings, and click "Apply".
@@ -144,7 +152,9 @@ Mimi is free. The only thing that can cost money is translation.
 - In Settings, open "Troubleshooting" → "Diagnostics" to check the GPU, speech recognition, audio capture, and translation in about 5 seconds. You can also reconnect audio or reset your settings there.
 - Report bugs or send requests on Discord (username: **lonelylimits**). Click "Copy results" in Diagnostics and paste them into your message — it helps a lot (API keys are not included).
 
-To uninstall, delete the extracted folder, `%APPDATA%\Mimi` (settings and logs), and `%LOCALAPPDATA%\Mimi` (speech model).
+**Updates:** Mimi checks for a new version on startup and shows "Update available" in the sidebar. Click "Update" → "Restart to update". Usually only the app itself (about 20 MB) is replaced; the full package (about 530 MB) is downloaded only when the GPU libraries change. Nothing is installed without your OK.
+
+**Uninstall:** Uninstall Mimi from Windows Settings → Apps → Installed apps. Your settings and history (`%APPDATA%\Mimi`) and the speech model (`%LOCALAPPDATA%\Mimi`) are kept; delete those folders too if you don't need them.
 
 ---
 
@@ -161,7 +171,9 @@ Mimi는 게임 보이스 채팅에서 들리는 말을 알아듣고 번역해서
 
 ### 다운로드
 
-[Releases](../../releases/latest)에서 `Mimi-<버전>-win64.zip`을 받으세요.
+[Releases](../../releases/latest)에서 `Mimi-Setup-<버전>.exe`를 받으세요.
+
+한 번 설치하면 새 버전이 나왔을 때 앱 안에서 업데이트할 수 있습니다 (보통 약 20MB만 내려받습니다).
 
 ### 필요한 것
 
@@ -171,7 +183,7 @@ Mimi는 게임 보이스 채팅에서 들리는 말을 알아듣고 번역해서
 
 ### 시작하기
 
-1. zip을 압축 해제하고 `Mimi.exe`를 실행합니다. "Windows의 PC 보호" 화면이 나오면 "추가 정보" → "실행"을 누르세요.
+1. `Mimi-Setup-<버전>.exe`를 실행해서 설치합니다 (관리자 권한이 필요 없습니다). "Windows의 PC 보호" 화면이 나오면 "추가 정보" → "실행"을 누르세요. zip 버전을 쓰던 분은 설치한 뒤 예전 폴더를 지워도 됩니다 (설정과 기록은 그대로 유지됩니다).
 2. 처음에는 설정 화면이 열립니다. 언어, 상대방 목소리가 들리는 장치, 마이크를 고르고 "시작하기"를 누르세요.
 3. 처음에는 Google 번역으로 작동합니다. 더 자연스럽게 번역하려면 무료 Groq API 키를
    [console.groq.com/keys](https://console.groq.com/keys)에서 만들어 설정의 "번역"에 붙여 넣은 뒤 "적용"을 누르세요.
@@ -208,7 +220,9 @@ Mimi는 무료입니다. 돈이 들 수 있는 것은 번역뿐입니다.
 - 설정의 '문제 해결' → '작동 진단'을 누르면 GPU·음성 인식·녹음·번역이 제대로 작동하는지 약 5초 만에 확인할 수 있습니다. 녹음 다시 연결이나 설정 초기화도 할 수 있습니다.
 - 버그 신고나 요청은 Discord(사용자 이름: **lonelylimits**)로 받고 있습니다. 진단의 '결과 복사'를 누르면 결과를 그대로 붙여 넣어 보낼 수 있으니 함께 보내 주시면 도움이 됩니다 (API 키는 포함되지 않습니다).
 
-삭제할 때는 압축을 푼 폴더와 `%APPDATA%\Mimi`(설정·로그), `%LOCALAPPDATA%\Mimi`(음성 인식 모델)를 지우세요.
+**업데이트:** 시작할 때 새 버전이 있는지 확인하고, 있으면 사이드바에 '새 버전이 있습니다'가 나옵니다. '업데이트' → '다시 시작해서 업데이트'를 누르세요. 보통은 앱 본체(약 20MB)만 바꾸고, GPU 라이브러리가 바뀐 버전만 전체(약 530MB)를 내려받습니다. 마음대로 바뀌지는 않습니다.
+
+**삭제:** Windows '설정' → '앱' → '설치된 앱'에서 Mimi를 제거하세요. 설정·기록(`%APPDATA%\Mimi`)과 음성 인식 모델(`%LOCALAPPDATA%\Mimi`)은 남으니, 필요 없으면 이 두 폴더도 지우세요.
 
 ---
 
