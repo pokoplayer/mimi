@@ -62,6 +62,7 @@ Mimi は無料で使えます。お金がかかる可能性があるのは翻訳
 | Google翻訳（最初の設定） | 無料 | キーは不要。ただし公式の API ではないため、使いすぎると一時的に止まることがあります |
 | Groq の AI翻訳（無料プラン） | 無料 | より自然な訳。1日に使える量に上限があります（下記） |
 | Groq の AI翻訳（有料プラン） | 1時間 約7円 | 無料プランより大きな上限で使えます（使った分だけ） |
+| 〃（モデルに Qwen を選んだ場合） | 1時間 約19円 | スラングやくだけた言い方をより自然に訳せて、速い |
 
 **完全無料で使うには**、Groq の APIキーを無料プランのまま使ってください。有料プランに切り替えない限り、料金はかかりません。キーを入れなければ、Google翻訳だけで動きます。
 
@@ -74,6 +75,7 @@ Mimi は無料で使えます。お金がかかる可能性があるのは翻訳
 **有料プランにした場合の目安**（gpt-oss-120b の料金: 100万トークンあたり 入力 $0.15・出力 $0.60）
 - 翻訳1回あたり 約 $0.00012（約0.02円）
 - にぎやかに話し続けた場合（1時間に約360回）で、1時間 約 $0.04（約7円）、3時間で約20円
+- 設定の「翻訳」→「AI翻訳のモデル」で Qwen 3.8 27B を選ぶと、くだけた言い方に強く速くなるかわりに、料金は約3倍（1時間 約19円）になります（料金: 100万トークンあたり 入力 $0.80・出力 $4.00）
 - 1ドル＝150円で計算しています。実際の料金の目安は、アプリの左下「このセッションの料金（目安）」と「履歴」で確かめられます
 
 ### アンインストール
@@ -121,6 +123,7 @@ Mimi is free. The only thing that can cost money is translation.
 | Google Translate (default) | Free | No key needed. It isn't an official API, so it may stop for a while if used heavily |
 | Groq AI translation (free plan) | Free | More natural translations, with a daily limit (see below) |
 | Groq AI translation (paid plan) | About $0.04 / hour | Higher limits than the free plan; pay only for what you use |
+| 〃 (with the Qwen model) | About $0.13 / hour | More natural with slang and casual speech, and faster |
 
 **To use Mimi completely free**, keep your Groq API key on the free plan — you won't be charged unless you upgrade. Without a key, Mimi uses Google Translate only.
 
@@ -133,6 +136,7 @@ Mimi is free. The only thing that can cost money is translation.
 **Paid plan estimate** (gpt-oss-120b: $0.15 input / $0.60 output per million tokens)
 - About $0.00012 per translation
 - About $0.04 per hour of non-stop chatting (about 360 translations an hour)
+- Choosing Qwen 3.8 27B under Settings → Translation → AI translation model handles casual speech better and is faster, but costs about 3 times as much (about $0.13 per hour; $0.80 input / $4.00 output per million tokens)
 - The app shows an estimate under "Cost this session" (bottom left) and in History
 
 ### Troubleshooting and contact
@@ -183,6 +187,7 @@ Mimi는 무료입니다. 돈이 들 수 있는 것은 번역뿐입니다.
 | Google 번역 (처음 설정) | 무료 | 키가 필요 없습니다. 다만 공식 API가 아니어서 많이 쓰면 잠시 멈출 수 있습니다 |
 | Groq AI 번역 (무료 플랜) | 무료 | 더 자연스러운 번역. 하루에 쓸 수 있는 양에 한도가 있습니다 (아래 참고) |
 | Groq AI 번역 (유료 플랜) | 1시간 약 $0.04 | 무료 플랜보다 큰 한도로 쓸 수 있습니다 (쓴 만큼만) |
+| 〃 (Qwen 모델을 고른 경우) | 1시간 약 $0.13 | 속어나 구어체를 더 자연스럽게 번역하고 빠릅니다 |
 
 **완전 무료로 쓰려면** Groq API 키를 무료 플랜 그대로 쓰세요. 유료 플랜으로 바꾸지 않는 한 요금은 나오지 않습니다. 키를 넣지 않으면 Google 번역만으로 작동합니다.
 
@@ -195,6 +200,7 @@ Mimi는 무료입니다. 돈이 들 수 있는 것은 번역뿐입니다.
 **유료 플랜 기준 예상** (gpt-oss-120b: 100만 토큰당 입력 $0.15·출력 $0.60)
 - 번역 1회 약 $0.00012
 - 쉬지 않고 이야기한 경우(1시간 약 360회) 1시간 약 $0.04
+- 설정의 '번역' → 'AI 번역 모델'에서 Qwen 3.8 27B를 고르면 구어체에 강하고 빨라지는 대신 요금이 약 3배(1시간 약 $0.13)가 됩니다 (100만 토큰당 입력 $0.80·출력 $4.00)
 - 실제 예상 요금은 앱 왼쪽 아래 '이번 세션 요금(예상)'과 '기록'에서 확인할 수 있습니다
 
 ### 문제가 있을 때·문의
